@@ -1,8 +1,8 @@
+## 🛡️ Wazuh Deployment Evidence
 
-| Wazuh Dashboard successfully running | Yes | Completed | screenshots/wazuh-dashboard-running.png |
-
-| Wazuh Indexer active | Yes | Completed | Terminal screenshot / service status |
-
-| Wazuh Manager active | Yes | Completed | Terminal screenshot / service status |
-
-| Wazuh Dashboard active | Yes | Completed | Terminal screenshot / service status |
+| Component | Status | Evidence |
+|----------|--------|----------|
+| Wazuh Dashboard | ✅ Running | ![Dashboard](../screenshots/wazuh-dashboard-running.png) |
+| Wazuh Indexer | ✅ Running | ![Indexer](../screenshots/wazuh-indexer-status.png) |
+| Wazuh Manager | ✅ Running | ![Manager](../screenshots/wazuh-manager-status.png) |
+| Wazuh Dashboard Service | ✅ Running | ![Service](../screenshots/wazuh-dashboard-status.png) |
