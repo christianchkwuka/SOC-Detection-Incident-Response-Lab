@@ -15,7 +15,7 @@ Während der Brute-Force-Angriffssimulation auf den Windows Server wurden mehrer
 - **Beschreibung:** Failed Logon  
 - **Bedeutung:** Mehrere fehlgeschlagene Login-Versuche deuten auf einen möglichen Brute-Force-Angriff hin  
 
-📸 *Screenshot einfügen: Wazuh Alert 4625*
+📸 ![Failed Login](screenshots/windows-event-4625.png)
 
 ---
 
