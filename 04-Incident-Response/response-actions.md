@@ -1,39 +1,67 @@
+# 🚑 Incident Response – Brute-Force Angriff (RDP)
 
-# 🛠️ Response Actions – Brute Force Angriff
+## 🎯 Überblick
 
-## 📌 Sofortmaßnahmen
-
-- Identifikation der betroffenen Benutzerkonten  
-- Analyse der Login-Logs  
-- Überprüfung der Quell-IP-Adresse  
+Dieser Abschnitt beschreibt die Reaktion auf einen simulierten Brute-Force-Angriff auf einen Windows Server über RDP unter Anwendung des **PICERL-Ansatzes**.
 
 ---
 
-## 🔐 Eindämmung (Containment)
+## 🔍 Preparation (Vorbereitung)
 
-- Temporäre Sperrung des Benutzerkontos  
-- Blockierung der Angreifer-IP (Firewall)  
-- Einschränkung des RDP-Zugriffs  
-
----
-
-## 🧹 Beseitigung (Eradication)
-
-- Passwort zurücksetzen  
-- Schwachstellen beheben (z. B. schwaches Passwort)  
+* SIEM (Wazuh) konfiguriert
+* Windows Event Logging aktiviert
+* Monitoring-Regeln definiert
 
 ---
 
-## 🔄 Wiederherstellung (Recovery)
+## 🧠 Identification (Erkennung)
 
-- Systemüberprüfung  
-- Überwachung nach Angriff  
-- Sicherstellen, dass kein weiterer Zugriff erfolgt  
+* Mehrere fehlgeschlagene Logins erkannt (**Event ID 4625**)
+* Auffälliges Login-Muster identifiziert:
+
+  * viele Versuche in kurzer Zeit
+  * gleiche Quell-IP
+  * unterschiedliche Passwörter
 
 ---
 
-## 📈 Verbesserung
+## 🚫 Containment (Eindämmung)
 
-- MFA implementieren  
-- Account Lockout Policy aktivieren  
-- SIEM-Regeln optimieren  
+* Blockierung der Angreifer-IP über Firewall
+* Temporäre Sperrung des Benutzerkontos
+* Einschränkung des RDP-Zugriffs
+
+---
+
+## 🔧 Eradication (Beseitigung)
+
+* Zurücksetzen kompromittierter Passwörter
+* Entfernung möglicher unautorisierter Zugriffe
+* Überprüfung der Systemintegrität
+
+---
+
+## 🔄 Recovery (Wiederherstellung)
+
+* System vollständig überprüft
+* Sichere Konfiguration bestätigt
+* Weiteres Monitoring aktiviert
+
+---
+
+## 📈 Lessons Learned (Verbesserung)
+
+* Schwache Passwörter erhöhen Risiko erheblich
+* Fehlende Account-Lockout-Policy begünstigt Angriff
+* Offener RDP-Zugang stellt kritische Schwachstelle dar
+
+---
+
+## 🛡️ Empfehlungen
+
+* Multi-Factor Authentication (MFA) implementieren
+* Account Lockout Policy aktivieren
+* RDP-Zugriff auf VPN beschränken
+* SIEM-Regeln kontinuierlich optimieren
+
+---
