@@ -23,6 +23,35 @@
 - Implementierung einer Account Lockout Policy  
 - Einschränkung des RDP-Zugriffs (VPN / Firewall)  
 
+
+
+# 📚 Lessons Learned
+
+## 🔍 What went wrong
+
+* Weak password policy
+* No account lockout mechanism
+* RDP exposed without restriction
+
+---
+
+## 🧠 What worked well
+
+* SIEM successfully detected attack pattern
+* Logs provided clear visibility (4624 / 4625)
+* Attack was reproducible and analyzable
+
+---
+
+## 🚀 Improvements
+
+* Implement MFA for all privileged accounts
+* Enforce account lockout after failed attempts
+* Restrict RDP access via VPN
+* Improve alerting rules in SIEM
+
+---
+
 ---
 
 ## 🎯 Fazit
