@@ -1,1 +1,66 @@
 
+# 🚨 Incident Report – Brute Force Attack (RDP)  
+# 🚨 Incident Report – Brute-Force-Angriff (RDP)
+
+---
+
+## 📌 Overview / Überblick
+
+**EN:**  
+A brute-force attack targeting the Remote Desktop Protocol (RDP) service on a Windows Server 2022 system was detected.
+
+**DE:**  
+Ein Brute-Force-Angriff auf den RDP-Dienst eines Windows Server 2022 Systems wurde erkannt.
+
+- **Target System / Zielsystem:** 192.168.56.5  
+- **Attack Type / Angriffsart:** Brute Force (RDP)  
+
+---
+
+## 🔍 Detection / Erkennung
+
+**EN:**  
+The attack was detected via SIEM (Wazuh), showing multiple failed login attempts followed by a successful login.
+
+**DE:**  
+Der Angriff wurde durch das SIEM (Wazuh) erkannt. Es wurden mehrere fehlgeschlagene Anmeldeversuche sowie ein erfolgreicher Login festgestellt.
+
+- Event ID 4625 → Failed Logon  
+- Event ID 4624 → Successful Logon  
+
+---
+
+## ⚠️ Analysis / Analyse
+
+**EN:**  
+The attack shows typical brute-force behavior:
+- High number of login attempts  
+- Same source IP  
+- Different passwords  
+
+**DE:**  
+Der Angriff zeigt typische Merkmale eines Brute-Force-Angriffs:
+- Viele Login-Versuche in kurzer Zeit  
+- Gleiche Quell-IP-Adresse  
+- Unterschiedliche Passwörter  
+
+---
+
+## 🧠 Assessment / Bewertung
+
+- **Severity / Schweregrad:** High / Hoch  
+- **Risk / Risiko:** Unauthorized access / Unautorisierter Zugriff  
+
+---
+
+## 📊 MITRE ATT&CK
+
+- **T1110 – Brute Force**
+
+---
+
+## 📸 Evidence / Beweise
+
+- Wazuh Alerts  
+- Windows Event Logs (4624, 4625)  
+- Hydra Attack Output  
