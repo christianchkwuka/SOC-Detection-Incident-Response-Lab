@@ -29,6 +29,20 @@ A brute-force attack is simulated from Kali Linux against a Windows Server accou
 
 The incident is then analyzed and documented as a professional security incident report.
 
+
+## Detection & Response Evidence
+
+### 1. Firewall Block (pfSense)
+![Firewall Block](04-Incident-Response/screenshots/pfsense-firewall-block.png)
+
+### 2. Wazuh Detection (Custom Rule)
+![Wazuh Detection](04-Incident-Response/screenshots/wazuh-logtest-rule-100101.png)
+
+### 3. AI SOC Agent Incident Output
+![AI SOC Output](04-Incident-Response/screenshots/ai-soc-agent-incident-output.png)
+
+### 4. AI Generated Incident Report
+![AI Report](04-Incident-Response/screenshots/ai-soc-agent-report-generated.png)
 ---
 
 ## Skills Demonstrated
