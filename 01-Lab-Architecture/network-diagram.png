@@ -1,1 +1,7 @@
-
+[Kali Linux] ---> [pfSense Firewall] ---> [Windows Server]
+                        |
+                        v
+                 [Wazuh SIEM]
+                        |
+                        v
+                 [AI Detection Agent]
