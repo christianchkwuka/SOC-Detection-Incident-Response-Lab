@@ -31,7 +31,7 @@ Purpose
 
 The scan was used to generate suspicious network traffic and firewall log events.
 
- ### 3.  Observed Result
+ ## 3.  Observed Result
 
 pfSense generated firewall logs showing blocked traffic.
 
