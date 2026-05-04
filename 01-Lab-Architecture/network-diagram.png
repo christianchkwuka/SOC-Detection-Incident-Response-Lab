@@ -5,3 +5,19 @@
                         |
                         v
                  [AI Detection Agent]
+
+
+## Detection Scenarios
+
+### 1. Brute Force Attack
+- Tool: Hydra
+- Detection: Event ID 4625
+- MITRE: T1110
+
+### 2. Firewall Block Detection
+- Source: pfSense logs
+- Detection: Custom Wazuh rule
+
+### 3. Successful Compromise
+- Event ID 4624
+- Indicates account breach
