@@ -1,37 +1,44 @@
-# 🚨 Incident Report: Brute Force Attack Detection
+# Incident Report: Firewall Blocked Attack
 
-## 🧭 Overview
-This report documents a simulated brute-force attack detected in the SOC lab environment using Wazuh SIEM and AI-SOC Agent.
+## Summary
+A potential network scan or attack was detected and blocked by the firewall. The event was captured by Wazuh SIEM and analyzed by the AI SOC Agent.
 
----
+## Detection Details
 
-## 📅 Date & Time
-- Date: 2026-05-04
-- Time: (Add your test time)
+| Field | Value |
+|------|------|
+| Severity | CRITICAL |
+| Rule ID | 100101 |
+| Rule Level | 12 |
+| Description | BLOCKED traffic detected (Possible scan or attack) |
+| Source IP | 192.168.56.10 |
+| Destination IP | 192.168.56.100 |
+| Detection Tool | Wazuh SIEM |
 
----
+## Timeline
 
-## 🖥️ Affected Systems
-- Target: Windows Server 2022 (192.168.56.5)
-- SIEM: Ubuntu Wazuh Server (192.168.56.13)
-- Attacker: Kali Linux
+1. Attacker initiated connection from Kali Linux
+2. pfSense firewall blocked the traffic
+3. Logs forwarded to Wazuh
+4. Custom rule triggered alert
+5. AI SOC Agent generated incident report
 
----
+## MITRE ATT&CK Mapping
 
-## ⚠️ Incident Description
-A brute-force attack was simulated using Hydra from Kali Linux targeting RDP authentication on the Windows Server.
+| Technique | Description |
+|----------|------------|
+| T1046 | Network Service Scanning |
 
-Multiple failed login attempts were detected and logged in Wazuh.
+## Recommended Actions
 
----
+- Isolate affected host
+- Block suspicious IP
+- Escalate to SOC Level 2
+- Preserve logs for forensic investigation
+- Create incident ticket
 
-## 🔍 Detection Details
+## Evidence
 
-### Wazuh Alert
-- Rule ID: 100101
-- Level: 12 (High)
-- Description: BLOCKED traffic detected (Possible scan or attack)
-
-### Log Evidence
-```text
-filterlog: block tcp 192.168.56.10 -> 192.168.56.100
+- Firewall logs
+- Wazuh alert logs
+- AI-generated incident report
