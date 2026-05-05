@@ -7,7 +7,6 @@
 - Brute-Force-Angriffe sind leicht automatisierbar  
 - SIEM-Systeme sind entscheidend für die frühzeitige Erkennung  
 
----
 
 ## ⚠️ Schwachstellen
 
@@ -49,6 +48,15 @@
 * Enforce account lockout after failed attempts
 * Restrict RDP access via VPN
 * Improve alerting rules in SIEM
+
+  ## Lessons Learned
+
+- SIEM systems require proper rule tuning
+- Firewall logs are critical for detection
+- Attack simulation improves detection accuracy
+- AI can enhance incident response speed
+- Logging and monitoring are key for compliance
+---
 
 ---
 
